@@ -1,0 +1,24 @@
+﻿<Window x:Class="EduShare_Escritorio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EduShare_Escritorio"
+        mc:Ignorable="d">
+    <Window.Resources>
+        <Storyboard x:Key="storyb_FadeOutAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.5" />
+        </Storyboard>
+
+        <Storyboard x:Key="storyb_FadeInAnimation">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5" />
+        </Storyboard>
+    </Window.Resources>
+    <Viewbox Stretch="Fill">
+        <Grid Height="720" Width="1280">
+            <Frame x:Name="fra_NavigationFrame" NavigationUIVisibility="Hidden"
+               Opacity="1" Navigating="NavigationFrame_Navigating"
+               Navigated="NavigationFrame_Navigated" />
+        </Grid>
+    </Viewbox>
+</Window>
