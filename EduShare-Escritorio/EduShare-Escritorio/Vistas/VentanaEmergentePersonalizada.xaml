@@ -1,0 +1,140 @@
+﻿<Window  x:Class="EduShare_Escritorio.Vistas.VentanaEmergentePersonalizada"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mensaje"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner" Width="394">
+
+    <Border x:Name="brd_Borde" CornerRadius="10" Padding="20" BorderThickness="1" Background="#EBEBEB">
+        <Grid Margin="-11,0,-11,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="img_Icono" 
+               Width="58"
+               Height="57"
+               Margin="8"
+               Grid.Column="0"/>
+
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
+                <TextBlock x:Name="txtb_Mensaje"
+                       FontSize="13"
+                       FontFamily="Calibri"
+                       FontWeight="Bold"
+                       Foreground="Black"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Width="286"
+                       Height="44"/>
+                <Border x:Name="brd_BotonAceptar" Background="#16b555" CornerRadius="4" Margin="0,15,00,0" Width="63" Height="18" Visibility="Visible" >
+                    <Button x:Name="btn_Aceptar" 
+                        Content="Aceptar"
+                        FontSize="13"
+                        FontFamily="Calibri"
+                        Background="Transparent" 
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="Bold"
+                        Cursor="Hand"
+                        OverridesDefaultStyle="True"
+                        Click="Cerrar" Margin="4,-2,4,0">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter Property="FontSize" Value="14" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="Cursor" Value="Hand" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="Transparent" CornerRadius="15" Padding="0" Width="55">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </Border>
+
+            </StackPanel>
+
+            <Border x:Name="brd_BotonSi" Background="#16b555" CornerRadius="4" Margin="109,53,156,6" Height="18" Visibility="Collapsed" Grid.Column="1" >
+                <Button x:Name="btn_Si" 
+                        Content="Sí"
+                        FontSize="13"
+                        FontFamily="Calibri"
+                        Background="Transparent" 
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontWeight="Bold"
+                        Cursor="Hand"
+                        OverridesDefaultStyle="True"
+                        Click="Aceptar" Margin="4,-2,4,0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontSize" Value="14" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="Transparent" CornerRadius="15" Padding="0" Width="13">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <Border x:Name="brd_BotonNo" Background="Gray" CornerRadius="4" Margin="158,53,107,6" Height="18" Visibility="Collapsed" Grid.Column="1" >
+                <Button x:Name="btn_No" 
+                    Content="Sí"
+                    FontSize="13"
+                    FontFamily="Calibri"
+                    Background="Transparent" 
+                    Foreground="White"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Cursor="Hand"
+                    OverridesDefaultStyle="True"
+                    Click="Aceptar" Margin="4,-2,4,0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontSize" Value="14" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Cursor" Value="Hand" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="Transparent" CornerRadius="15" Padding="0" Width="13">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+        </Grid>
+    </Border>
+
+</Window>

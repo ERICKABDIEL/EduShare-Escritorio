@@ -1,0 +1,143 @@
+﻿<Page x:Class="EduShare_Escritorio.Vistas.ModuloUsuario.EditarPerfil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EduShare_Escritorio.Vistas"
+      mc:Ignorable="d" 
+      
+      Background="White"
+      d:DesignHeight="574" d:DesignWidth="1280">
+
+    <Grid Margin="157,0,157,0">
+
+        <!-- Título -->
+        <Label Content="Editar Per" FontWeight="Bold" FontSize="40" Margin="366,16,367,496" />
+        <Label Content="fil" FontWeight="Bold" Foreground="#16b555" FontSize="40" Margin="550,16,361,496" />
+
+
+
+        <!-- Nombre -->
+        <Label Content="Nombre(s)" FontFamily="Calibri" FontSize="18" Margin="20,100,799,446" />
+        <Border x:Name="brd_Nombre" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="26,138,690,393">
+            <TextBox x:Name="txtb_Nombre" Height="26" FontSize="18" Background="Transparent"
+                     BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="3,9,3,6" />
+        </Border>
+
+        <!-- Primer Apellido -->
+        <Label Content="Primer apellido" FontFamily="Calibri" FontSize="18" Margin="352,100,467,446" />
+        <Border x:Name="brd_PrimerApellido" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="358,138,358,393">
+            <TextBox x:Name="txtb_PrimerApellido" Height="26" FontSize="18" Background="Transparent"
+                    BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="0,9,-1,6" />
+        </Border>
+
+        <!-- Segundo Apellido -->
+        <Label Content="Segundo apellido" FontFamily="Calibri" FontSize="18" Margin="690,100,129,446" />
+        <Border x:Name="brd_SegundoApellido" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="690,138,26,393">
+            <TextBox x:Name="txtb_SegundoApellido" Height="26" FontSize="18" Background="Transparent"
+                    BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="0,9,-1,6" />
+        </Border>
+
+
+        <!-- Correo -->
+        <Label Content="Correo" FontFamily="Calibri" FontSize="18" Margin="20,210,872,336" />
+        <Border x:Name="brd_Correo" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="26,248,690,283">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Correo.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_Correo" Width="222" Height="26" FontSize="18" Background="Transparent"
+                         BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="256" />
+            </DockPanel>
+        </Border>
+
+        <!-- Usuario -->
+        <Label Content="Usuario" FontFamily="Calibri" FontSize="18" Margin="352,210,468,336" />
+        <Border x:Name="brd_Usuario" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="358,248,358,286">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/UsuarioLogin.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_Usuario" Width="219" Height="26" FontSize="18" Background="Transparent"
+                         BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="15" />
+            </DockPanel>
+        </Border>
+
+        <!-- Línea de separación -->
+        <Canvas Margin="0,324,0,215">
+            <TextBlock FontFamily="Calibri"  Foreground="Black" Text="Personaliza tu cuenta"
+               FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="294" />
+            <Line X1="0" Y1="20" X2="970" Y2="20" Stroke="Green" StrokeThickness="2"
+          HorizontalAlignment="Left" VerticalAlignment="Center" Width="966" Canvas.Top="10" />
+        </Canvas>
+
+        <!-- Nivel Educativo -->
+        <Label Content="Nivel Educativo" FontFamily="Calibri"  FontSize="18" Margin="20,364,795,176" />
+        <Border x:Name="brd_NivelEducativo" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="26,403,690,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/NivelEducativo.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <ComboBox x:Name="cmb_NivelEducativo" Width="225" Height="26" FontSize="18" Cursor="Hand"
+                          Background="Transparent" BorderThickness="0" Foreground="Black" FontFamily="Calibri">
+                    <ComboBoxItem Content="Preparatoria" Cursor="Hand" />
+                    <ComboBoxItem Content="Universidad" Cursor="Hand" />
+                </ComboBox>
+            </DockPanel>
+        </Border>
+
+        <!-- Institución Educativa -->
+        <Label Content="Institución Educativa" FontFamily="Calibri" FontSize="18" Margin="352,364,435,176" />
+        <Border x:Name="brd_Institucion" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="358,403,358,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Institucion.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <ComboBox x:Name="cmb_Institución" Width="224" Height="26" FontSize="18" Cursor="Hand"
+                          Background="Transparent" BorderThickness="0" Foreground="Black" FontFamily="Calibri">
+                    <ComboBoxItem Content="UV" Cursor="Hand" />
+                    <ComboBoxItem Content="UNAM" Cursor="Hand" />
+                </ComboBox>
+            </DockPanel>
+        </Border>
+
+        <!-- Carrera -->
+        <Label Content="Carrera" FontFamily="Calibri"  FontSize="18" Margin="685,364,159,176" />
+        <Border x:Name="brd_Carrera" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="690,403,26,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Carrera.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <ComboBox x:Name="cmb_Carrera" Width="223" Height="26" FontSize="18" Cursor="Hand"
+                          Background="Transparent" BorderThickness="0" Foreground="Black" FontFamily="Calibri">
+                    <ComboBoxItem Content="LIS" Cursor="Hand" />
+                    <ComboBoxItem Content="Redes" Cursor="Hand" />
+                </ComboBox>
+            </DockPanel>
+        </Border>
+
+        <Label Content="← Volver al perfil" FontFamily="Calibri" FontWeight="Bold" MouseDown="RegresarAlPerfil" Cursor="Hand" FontSize="20" Margin="0,26,807,514" />
+        <Line X1="0" Y1="20" X2="145" Y2="20" Stroke="Gray" StrokeThickness="1"
+          HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Canvas.Top="10" Margin="6,36,0,0" />
+
+        <Border Background="#16b555" CornerRadius="8" Margin="843,500,26,34">
+            <Button x:Name="btn_Guardar" Content="Guardar" FontSize="20" FontFamily="Calibri" 
+            Background="Transparent" Foreground="White" FontWeight="Bold"
+            BorderThickness="0" Cursor="Hand" Click="ActualizarPerfil" Margin="0,-4,0,-6">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="22"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="Transparent" CornerRadius="15" Padding="10" Width="90" Height="NaN" Margin="0,0,0,6">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Border>
+
+        <Label Content="Cancelar" FontWeight="Bold" FontSize="20" FontFamily="Calibri" Cursor="Hand" Margin="718,500,164,34" MouseDown="RegresarAlPerfil"/>
+
+    </Grid>
+</Page>
+
