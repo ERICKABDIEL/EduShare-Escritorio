@@ -1,0 +1,82 @@
+﻿<Page x:Class="EduShare_Escritorio.Vistas.ModuloLogin.VerificarCodigo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EduShare_Escritorio.Vistas"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280">
+
+    <Grid Background="#BEBEBE">
+
+        <Grid Margin="393,30,392,30" Background="White">
+            <Image Source="/Vistas/Recursos/Iconos/LogoEduShare.png" MouseDown="RegresarAlMenuPrincipal"  Margin="192,40,192,552" Cursor="Hand"/>
+            <Image Source="/Vistas/Recursos/Iconos/CorreoEnviado.png" MouseDown="RegresarAlMenuPrincipal"  Margin="311,123,135,513" Cursor="Hand"/>
+
+            <Label Content="¡Revise su email!" FontWeight="Bold" FontSize="27" FontFamily="Calibri"  Margin="108,113,109,503"/>
+            <TextBlock x:Name="txtb_Mensaje"
+                       Text="Por favor, revise la dirección de correo electrónico que proporcionó y busque un email que contenga un código para restablecer la contraseña."
+                       FontSize="17"
+                       FontFamily="Calibri"
+                       Foreground="Black"
+                       TextWrapping="Wrap"
+                       LineHeight="31"
+                       TextAlignment="Center" Margin="50,172,50,406"/>
+
+            <Border BorderThickness="1" BorderBrush="#16b555"  CornerRadius="8" Margin="50,292,50,308">
+                <DockPanel Margin="0,0,0,-1">
+                    <Image Source="/Vistas/Recursos/Iconos/Codigo.png" Width="35" Margin="10" DockPanel.Dock="Right"/>
+                    <TextBox x:Name="txtb_Codigo" Width="325" Height="26" FontSize="20" Background="Transparent" 
+                                         BorderThickness="0" Text="Código de Verificación" Foreground="Gray" FontFamily="Calirbi" 
+                                         GotFocus="UserIdTextBox_GotFocus" LostFocus="UserIdTextBox_LostFocus" MaxLength="10" />
+                </DockPanel>
+            </Border>
+
+
+            <Border Background="#16b555" CornerRadius="8" Margin="50,386,50,214">
+                <Button x:Name="btn_EnviarCorreo" Content="Recuperar Contraseña" Width="350" Height="60" FontSize="20" FontFamily="Calibri" 
+                    Background="Transparent" Foreground="White" FontWeight="Bold"
+                    BorderThickness="0" Cursor="Hand"
+                    OverridesDefaultStyle="True" Click="VerificarCodigoEntrante">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="FontSize" Value="22"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="Transparent"
+                                            CornerRadius="15"
+                                            Padding="10"
+                                            Width="350"
+                                            Height="NaN" Margin="0,0,0,6">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <Label Content="Volver" FontWeight="Bold" FontSize="20" FontFamily="Calibri" Cursor="Hand" Margin="217,461,216,165" MouseDown="RegresarLogin"/>
+
+
+            <Canvas Margin="50,598,51,40">
+                <TextBlock x:Name="txtb_RecuperarContraseña" Cursor="Hand" FontFamily="Calibri" Foreground="Gray"
+                   Text="UNA SUSCRIPCIÓN PARA" 
+                   FontSize="14" />
+                <Line X1="140" Y1="20" X2="392" Y2="20"
+              Stroke="Gray"
+              StrokeThickness=".6" Canvas.Top="-11" HorizontalAlignment="Left" VerticalAlignment="Center" Width="392" />
+            </Canvas>
+
+        </Grid>
+    </Grid>
+</Page>

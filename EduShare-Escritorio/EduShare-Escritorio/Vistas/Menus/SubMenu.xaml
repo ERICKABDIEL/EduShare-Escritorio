@@ -1,0 +1,69 @@
+﻿<Page x:Class="EduShare_Escritorio.Vistas.Menus.SubMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EduShare_Escritorio.Vistas"
+      xmlns:wpfGif="http://wpfanimatedgif.codeplex.com"
+      mc:Ignorable="d" 
+      Background="White"
+      d:DesignHeight="574" d:DesignWidth="1280">
+
+    <Grid x:Name="grd_Menu" Margin="0,0,0,0" >
+        <TextBlock Text="Has aprendido mucho, ¡ahora compártelo con otros! 🎓 " FontSize="35"  FontFamily="Calibri"  VerticalAlignment="Top" FontWeight="Bold" Foreground="Black" Height="40" Margin="157,10,303,0"/>
+        <TextBlock Text="Domina cualquier materia con recursos creados por estudiantes como tú, en una comunidad que aprende y crece unida." FontSize="19" FontFamily="Calibri"  VerticalAlignment="Top" Foreground="Black" Height="40" Margin="157,92,157,0"/>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="157,137,157,63">
+            <StackPanel Orientation="Horizontal">
+                <Border Width="220" Height="300" Background="#FAF9F7" BorderBrush="LightGray" BorderThickness="1" Margin="0">
+                    <StackPanel VerticalAlignment="Stretch">
+                        <TextBlock Text="Arte" FontSize="25" FontWeight="Bold" FontFamily="Calibri" Margin="30,30,0,0" />
+
+                        <Label x:Name="btn_VerTodoArte" Content="Ver todo →" Background="Transparent" FontSize="16" FontFamily="Calibri" BorderThickness="0" Foreground="Black"
+                             HorizontalAlignment="Left" Margin="30,64,0,40"
+                             Cursor="Hand" />
+
+                        <Image Source="/Vistas/Recursos/Fondos/Arte.jpg" Margin="5,0,5,0" Stretch="UniformToFill" Height="99" />
+                    </StackPanel>
+                </Border>
+
+                <Border Width="220" Height="300" Background="#FAF9F7" BorderBrush="LightGray" BorderThickness="1" Margin="50,0,0,0">
+                    <StackPanel VerticalAlignment="Stretch">
+                        <TextBlock Text="Programación" FontSize="25" FontWeight="Bold" FontFamily="Calibri" Margin="30,30,0,0" />
+
+                        <Label x:Name="btn_VerTodoProgramacion" Content="Ver todo →" Background="Transparent" FontSize="16" FontFamily="Calibri" BorderThickness="0" Foreground="Black"
+                         HorizontalAlignment="Left" Margin="30,64,0,40"
+                         Cursor="Hand" />
+                        <Image wpfGif:ImageBehavior.AnimatedSource="/Vistas/Recursos/Fondos/Programacion.gif" Margin="5,0,5,0" Stretch="UniformToFill" Height="99" />
+
+                    </StackPanel>
+                </Border>
+
+                <Border Width="220" Height="300" Background="#FAF9F7" BorderBrush="LightGray" BorderThickness="1" Margin="50,0,0,0">
+                    <StackPanel VerticalAlignment="Stretch">
+                        <TextBlock Text="Derecho" FontSize="25" FontWeight="Bold" FontFamily="Calibri" Margin="30,30,0,0" />
+
+                        <Label x:Name="btn_VerTodoDerecho" Content="Ver todo →" Background="Transparent" FontSize="16" FontFamily="Calibri" BorderThickness="0" Foreground="Black"
+                             HorizontalAlignment="Left" Margin="30,64,0,40"
+                             Cursor="Hand" />
+                        <Image Source="/Vistas/Recursos/Fondos/Derecho.jpg" Margin="5,0,5,0" Stretch="UniformToFill" Height="99" />
+                    </StackPanel>
+                </Border>
+
+
+                <Border Width="220" Height="300" Background="#FAF9F7" BorderBrush="LightGray" BorderThickness="1" Margin="50,0,0,0" Cursor="">
+                    <StackPanel VerticalAlignment="Stretch">
+                        <TextBlock Text="Ingeniería" FontSize="25" FontWeight="Bold" FontFamily="Calibri" Margin="30,30,0,0" />
+
+                        <Label x:Name="btn_VerTodoIngenieria" Content="Ver todo →" Background="Transparent" FontSize="16" FontFamily="Calibri" BorderThickness="0" Foreground="Black"
+                             HorizontalAlignment="Left" Margin="30,64,0,40"
+                             Cursor="Hand" />
+                        <Image Source="/Vistas/Recursos/Fondos/Ingenieria.jpg" Margin="5,0,5,0" Stretch="UniformToFill" Height="99" />
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+    
+</Page>

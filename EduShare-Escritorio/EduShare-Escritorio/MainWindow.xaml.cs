@@ -22,7 +22,7 @@ namespace EduShare_Escritorio
         {
             InitializeComponent();
 
-            fra_NavigationFrame.Navigate(new Vistas.MenuPrincipal());
+            fra_NavigationFrame.Navigate(new Vistas.Menus.MenuPrincipal());
 
         }
         private void NavigationFrame_Navigating(object sender, NavigatingCancelEventArgs e)

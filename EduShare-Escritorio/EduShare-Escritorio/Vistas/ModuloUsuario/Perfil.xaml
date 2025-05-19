@@ -1,0 +1,98 @@
+﻿<Page x:Class="EduShare_Escritorio.Vistas.ModuloUsuario.Perfil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EduShare_Escritorio.Vistas"
+      mc:Ignorable="d" 
+      Background="White"
+      d:DesignHeight="574" d:DesignWidth="1280">
+
+    <Grid Margin="157,0,157,0">
+
+        <!-- Título -->
+        <Label Content="Tu Per" FontWeight="Bold" FontSize="40" Margin="153,59,530,453" />
+        <Label Content="fil" FontWeight="Bold" Foreground="#16b555" FontSize="40" Margin="272,59,639,453" />
+
+        <Grid Width="120" Height="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0">
+            <!-- Imagen circular -->
+            <Ellipse Width="120" Height="120" Cursor="Hand" MouseDown="CambiarImagen">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="img_FotoPerfil" ImageSource="/Vistas/Recursos/Iconos/A.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <Image Source="/Vistas/Recursos/Iconos/Camara.png" Cursor="Hand" MouseDown="CambiarImagen" Margin="81,86,12,7" />
+        </Grid>
+
+
+        <!-- Línea de separación -->
+        <Canvas Margin="0,170,0,369">
+            <TextBlock FontFamily="Calibri" FontWeight="Bold" Foreground="Black" Text="Información de la cuenta"
+               FontSize="23" HorizontalAlignment="Left" VerticalAlignment="Center" Width="294" />
+            <Line X1="0" Y1="20" X2="970" Y2="20" Stroke="Green" StrokeThickness="3"
+          HorizontalAlignment="Left" VerticalAlignment="Center" Width="966" Canvas.Top="10" />
+        </Canvas>
+
+        <!-- Nombre -->
+        <Label Content="Nombre completo" FontFamily="Calibri" FontWeight="Bold" FontSize="18" Margin="20,220,800,326" />
+        <Border x:Name="brd_Nombre" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="26,259,690,272">
+            <TextBox x:Name="txtb_Nombre" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                     BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="3,9,3,6" />
+        </Border>
+
+        <!-- Correo -->
+        <Label Content="Correo" FontWeight="Bold" FontFamily="Calibri" FontSize="18" Margin="354,220,550,326" />
+        <Border x:Name="brd_Correo" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="358,259,358,272">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Correo.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_Correo" Width="222" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                         BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="256" />
+            </DockPanel>
+        </Border>
+
+        <!-- Usuario -->
+        <Label Content="Usuario" FontFamily="Calibri" FontWeight="Bold" FontSize="18" Margin="686,220,134,326" />
+        <Border x:Name="brd_Usuario" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="690,259,26,273">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/UsuarioLogin.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_Usuario" Width="219" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                         BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="15" />
+            </DockPanel>
+        </Border>
+
+        <!-- Nivel Educativo -->
+        <Label Content="Nivel Educativo" FontFamily="Calibri" FontWeight="Bold" FontSize="18" Margin="20,364,795,176" />
+        <Border x:Name="brd_NivelEducativo" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="26,403,690,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/NivelEducativo.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_NivelEducativo" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                     BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="3,9,3,6" />
+            </DockPanel>
+        </Border>
+
+        <!-- Institución Educativa -->
+        <Label Content="Institución Educativa" FontWeight="Bold" FontFamily="Calibri" FontSize="18" Margin="352,364,435,176" />
+        <Border x:Name="brd_Institucion" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="358,403,358,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Institucion.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="txtb_Institucion" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                     BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="3,9,3,6" />
+            </DockPanel>
+        </Border>
+
+        <!-- Carrera -->
+        <Label Content="Carrera" FontFamily="Calibri" FontWeight="Bold" FontSize="18" Margin="685,364,159,176" />
+        <Border x:Name="brd_Carrera" BorderThickness="1" BorderBrush="#16b555" CornerRadius="8" Margin="690,403,26,128">
+            <DockPanel Margin="0,0,0,-1">
+                <Image Source="/Vistas/Recursos/Iconos/Carrera.png" Width="18" Margin="3" DockPanel.Dock="Right" Height="36" />
+                <TextBox x:Name="Carrera" Height="26" FontSize="18" Background="Transparent" IsReadOnly="True"
+                     BorderThickness="0" Foreground="Black" FontFamily="Calibri" MaxLength="30" Margin="3,9,3,6" />
+            </DockPanel>
+        </Border>
+
+        <Label Content="Editar" FontFamily="Calibri" FontWeight="Bold" MouseDown="Editar" Cursor="Hand" FontSize="20" Margin="858,81,48,459" />
+        <Line X1="0" Y1="20" X2="56" Y2="20" Stroke="Gray" StrokeThickness="1"
+          HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Canvas.Top="10" Margin="860,90,0,0" />
+    </Grid>
+</Page>
